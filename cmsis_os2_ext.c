@@ -28,16 +28,16 @@ uint32_t osCounterGetMilli ()
 }
 
 /**
- * The millisecond counter will overflow every 49.7 days.
- * This second counter, as long as it is called at least between each overflow,
- * will be able to handle the overflow.
+ * osCounterGetMilli will overflow every 49.7 days.
+ * This 64-bit version counter, as long as it is called at least once between
+ * each overflow, will be able to handle the overflow.
  *
  * The function may be called from several threads in parallel, so it is
  * necessary to synchronize these accesses - kernel locking is used for this.
  *
  * The function may not be called from an ISR.
  */
-uint32_t osCounterGetSecond ()
+uint64_t osCounterGetMilli64 ()
 {
 	int32_t lock = osKernelLock();
 	uint32_t millis32 = osCounterGetMilli();
@@ -53,7 +53,12 @@ uint32_t osCounterGetSecond ()
 
 	osKernelRestoreLock(lock);
 
-	return millis64 / 1000;
+	return millis64;
+}
+
+uint32_t osCounterGetSecond ()
+{
+	return osCounterGetMilli64() / 1000;
 }
 
 void osKernelReboot ()

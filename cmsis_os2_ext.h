@@ -17,6 +17,13 @@
 uint32_t osCounterGetMilli();
 
 /**
+ * Get milliseconds since kernel start.
+ *
+ * The function may NOT be called from an ISR!
+ */
+uint64_t osCounterGetMilli64();
+
+/**
  * Get seconds since kernel start.
  *
  * The function may NOT be called from an ISR!
