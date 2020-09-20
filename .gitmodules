@@ -1,0 +1,35 @@
+# Base platform and buildsystem
+[submodule "test/zoo/thinnect.node-buildsystem"]
+	path = test/zoo/thinnect.node-buildsystem
+	url = https://github.com/thinnect/node-buildsystem.git
+	branch = master
+[submodule "test/zoo/thinnect.node-platform"]
+	path = test/zoo/thinnect.node-platform
+	url = https://github.com/thinnect/node-platform.git
+	branch = newmaster
+[submodule "test/zoo/thinnect.lll"]
+	path = test/zoo/thinnect.lll
+	url = https://github.com/thinnect/lll.git
+	branch = master
+
+# Platforms
+[submodule "test/zoo/thinnect.dev-platforms"]
+	path = test/zoo/thinnect.dev-platforms
+	url = https://github.com/thinnect/dev-platforms.git
+	branch = master
+
+# SDK, OS, CMSIS
+[submodule "test/zoo/FreeRTOS-Kernel"]
+	path = test/zoo/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel
+	branch = master
+[submodule "test/zoo/thinnect.cmsis-freertos"]
+	path = test/zoo/thinnect.cmsis-freertos
+	url = https://github.com/thinnect/cmsis-freertos
+	branch = master
+
+# External tools
+[submodule "test/zoo/graphitemaster.incbin"]
+	path = test/zoo/graphitemaster.incbin
+	url = https://github.com/graphitemaster/incbin.git
+	branch = main
