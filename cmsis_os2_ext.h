@@ -35,4 +35,9 @@ uint32_t osCounterGetSecond();
  */
 void osKernelReboot();
 
+/**
+ * Get the space needed for the thread control block of static threads.
+ */
+size_t osThreadControlBlockSize();
+
 #endif//CMSIS_OS2_EXT_H_

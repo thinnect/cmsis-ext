@@ -65,3 +65,8 @@ void osKernelReboot ()
 {
 	NVIC_SystemReset();
 }
+
+size_t osThreadControlBlockSize ()
+{
+	return sizeof(StaticTask_t);
+}
