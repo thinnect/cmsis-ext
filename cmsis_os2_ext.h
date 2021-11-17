@@ -14,30 +14,30 @@
  *
  * The function may NOT be called from an ISR!
  */
-uint32_t osCounterGetMilli();
+uint32_t osCounterGetMilli (void);
 
 /**
  * Get milliseconds since kernel start.
  *
  * The function may NOT be called from an ISR!
  */
-uint64_t osCounterGetMilli64();
+uint64_t osCounterGetMilli64 (void);
 
 /**
  * Get seconds since kernel start.
  *
  * The function may NOT be called from an ISR!
  */
-uint32_t osCounterGetSecond();
+uint32_t osCounterGetSecond (void);
 
 /**
  * Reboot the device.
  */
-void osKernelReboot();
+void osKernelReboot (void);
 
 /**
  * Get the space needed for the thread control block of static threads.
  */
-size_t osThreadControlBlockSize();
+size_t osThreadControlBlockSize (void);
 
 #endif//CMSIS_OS2_EXT_H_
